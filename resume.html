@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Raj Vyas</title>
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
+  <style>
+    @font-face { font-family: 'Anton'; src: url('./lib/Anton-Regular.woff2') format('woff2'); }
+    @font-face { font-family: 'WS'; src: url('./lib/WorkSans-Regular.woff2') format('woff2'); font-weight: 400; }
+    @font-face { font-family: 'WS'; src: url('./lib/WorkSans-SemiBold.woff2') format('woff2'); font-weight: 600; }
+    :root { --bg: #ffe9cf; --ink: #270f03; --yellow: #ffe600; --pink: #ff5f6d; --blue: #3d7bff; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font: 400 16px/1.6 'WS', 'Segoe UI', sans-serif; padding: 2.5rem 1rem 4rem; }
+    .sheet { max-width: 860px; margin: 0 auto; background: #fff; border: 3.5px solid #000; box-shadow: 8px 8px 0 #000; padding: 2.6rem clamp(1.2rem, 5vw, 3.4rem); }
+    .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+    .badge { display: inline-block; background: #0d0d0d; color: var(--yellow); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .35rem 1rem; font-size: .8rem; }
+    h1 { font: 400 clamp(3rem, 9vw, 5.2rem)/0.95 'Anton', Impact, sans-serif; text-transform: uppercase; margin: .8rem 0 .3rem; }
+    .role { font-weight: 600; font-size: 1.1rem; }
+    .links { display: flex; flex-wrap: wrap; gap: .5rem 1rem; margin-top: .8rem; font-size: .95rem; }
+    .links a { color: var(--ink); font-weight: 600; }
+    h2 { font: 400 1.6rem/1 'Anton', Impact, sans-serif; text-transform: uppercase; letter-spacing: .02em; margin: 2.2rem 0 .9rem; padding-bottom: .4rem; border-bottom: 3px solid #000; }
+    .job { margin-bottom: 1.3rem; }
+    .job-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-weight: 600; }
+    .job-head span:last-child { font-weight: 400; color: #6b5a50; font-variant-numeric: tabular-nums; }
+    ul { padding-left: 1.2rem; margin-top: .35rem; }
+    li + li { margin-top: .25rem; }
+    .skills { display: grid; grid-template-columns: 170px 1fr; gap: .45rem 1rem; }
+    .skills b { font-weight: 600; }
+    .proj a { color: var(--ink); }
+    .chip { display: inline-block; background: var(--yellow); border: 2px solid #000; padding: .05rem .5rem; font-size: .8rem; font-weight: 600; margin-left: .4rem; vertical-align: middle; }
+    .actions { max-width: 860px; margin: 1.6rem auto 0; display: flex; gap: .8rem; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; background: var(--yellow); color: #000; font-weight: 600; text-decoration: none; padding: .75rem 1.5rem; border: 3px solid #000; box-shadow: 4px 4px 0 #000; text-transform: uppercase; letter-spacing: .03em; cursor: pointer; font-family: inherit; font-size: .95rem; }
+    .btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #000; }
+    .btn.alt { background: #fff; }
+    .btn:focus-visible, a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+    @media (max-width: 560px) { .skills { grid-template-columns: 1fr; } }
+    @media print { body { background: #fff; padding: 0; } .sheet { box-shadow: none; border: 0; } .actions { display: none; } }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <div class="top">
+      <div>
+        <div class="badge">Curriculum Vitae</div>
+        <h1>Raj Vyas</h1>
+        <div class="role">AI Engineer · Computer Vision, LLMs & Python</div>
+        <div class="links">
+          <span>Jodhpur, Rajasthan, India</span>
+          <a href="mailto:rajvyas72002@gmail.com">rajvyas72002@gmail.com</a>
+          <a href="https://www.linkedin.com/in/vyasr3208" target="_blank" rel="noopener">linkedin.com/in/vyasr3208</a>
+          <a href="https://github.com/RAJVYAS72002" target="_blank" rel="noopener">github.com/RAJVYAS72002</a>
+          <a href="https://www.kaggle.com/rajvyas724" target="_blank" rel="noopener">kaggle.com/rajvyas724</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Summary</h2>
+    <p>I am a Python developer who automates internal company workflows and builds tools that save manual work. I work closely with business teams to understand their problems and build solutions on site. I have strong hands-on experience in computer vision, including object detection and tracking, and I use LLMs to build smarter automation.</p>
+
+    <h2>Experience</h2>
+    <div class="job">
+      <div class="job-head"><span>Python Developer · Genus Power Infrastructures Ltd.</span><span>Apr 2026 – Present · Jodhpur</span></div>
+      <ul>
+        <li>Build Python automation tools and data pipelines for utility operations teams, deployed end to end from data ingestion to production.</li>
+        <li>Delivered the SAT Testing Bot, Auto Ticket Closer Bot, Grid Topology Tracker, Delta Change Tool, GAP Bot and Unmapped Meters Tool, each built to remove a specific manual workflow.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><span>Freelance Python Automation Developer · Self-employed, part-time</span><span>2026 – Present · Remote</span></div>
+      <ul><li>Build custom Python automation tools for clients, from understanding their manual workflow to delivering the finished solution.</li></ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><span>AI/ML Engineer Intern · Anand Rathi IT Pvt Ltd.</span><span>Dec 2025 – Apr 2026 · Jodhpur</span></div>
+      <ul>
+        <li>Built AI-powered monitoring and root-cause analysis tools using clustering and anomaly detection on system and infrastructure logs.</li>
+        <li>Built secure data pipelines and a live dashboard so the team could catch failures before they hit production.</li>
+      </ul>
+    </div>
+    <div class="job">
+      <div class="job-head"><span>Data Science with Python Intern · NetParam Technologies Pvt. Ltd.</span><span>Jun 2025 – Aug 2025 · Jaipur</span></div>
+      <ul>
+        <li>Built a real-time computer vision pipeline for vehicle detection, tracking and license-plate recognition.</li>
+        <li>Integrated an LLM to generate analytics summaries from detection logs, cutting manual reporting work.</li>
+      </ul>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="job proj">
+      <div class="job-head"><span>Vault Document System <span class="chip">Featured</span></span><span>FastAPI · LangChain · PostgreSQL · Celery · Redis · GPT-4o · Next.js</span></div>
+      <ul><li>Document Q&amp;A with cited answers and page numbers: hybrid BM25 + vector search, a quote verifier that refuses unsupported answers, background processing and 212 automated tests. <a href="https://github.com/rajvyas72002/vault-document-system" target="_blank" rel="noopener">GitHub</a></li></ul>
+    </div>
+    <div class="job proj">
+      <div class="job-head"><span>AutoTrack AI</span><span>YOLOv5 · Deep SORT · EasyOCR · Ollama</span></div>
+      <ul><li>Real-time vehicle detection, tracking and license-plate recognition with automated analytics reporting. <a href="https://github.com/rajvyas72002/Autotrack-AI" target="_blank" rel="noopener">GitHub</a></li></ul>
+    </div>
+    <div class="job proj">
+      <div class="job-head"><span>RCA System</span><span>Isolation Forest · DBSCAN · Streamlit · SQLite · HMAC</span></div>
+      <ul><li>Monitoring that uses anomaly detection and clustering on system logs to flag failures early and point at the likely root cause. <a href="https://github.com/rajvyas72002/RCA-SYSTEM" target="_blank" rel="noopener">GitHub</a></li></ul>
+    </div>
+
+    <h2>Skills</h2>
+    <div class="skills">
+      <b>Languages</b><span>Python</span>
+      <b>ML / Computer Vision</b><span>PyTorch, scikit-learn, TensorFlow, OpenCV, YOLO, object detection & tracking, CUDA, TensorRT</span>
+      <b>LLM / RAG</b><span>LangChain, OpenAI API, hybrid search (BM25 + embeddings), Ollama</span>
+      <b>Frameworks & tools</b><span>FastAPI, Streamlit, REST APIs, Pandas, NumPy, PostgreSQL, SQLite, Celery, Redis, Git, Docker, Power BI, Excel</span>
+      <b>Cloud</b><span>AWS</span>
+    </div>
+
+    <h2>Education</h2>
+    <div class="job"><div class="job-head"><span>MCA, AI &amp; Machine Learning · Jodhpur Institute of Engineering and Technology</span><span>2024 – 2026 · CGPA 8.0</span></div></div>
+    <div class="job"><div class="job-head"><span>BCA · Aishwarya College of Education</span><span>2021 – 2024 · 70%</span></div></div>
+
+    <h2>Certifications & achievements</h2>
+    <ul>
+      <li><b>Winner, TechVerse 2026</b> (Genus Power Infrastructures): AI-powered root cause analysis system for IT incidents</li>
+      <li>AWS Certified Cloud Practitioner</li>
+      <li>Deloitte Data Analytics Job Simulation, Forage</li>
+      <li>100 Days of Code: The Complete Python Pro Bootcamp</li>
+      <li>National-level badminton athlete, India</li>
+    </ul>
+  </main>
+  <div class="actions">
+    <a href="index.html" class="btn">← Back to portfolio</a>
+    <button type="button" class="btn alt" onclick="window.print()">Print or save as PDF</button>
+  </div>
+</body>
+</html>
