@@ -2529,6 +2529,28 @@
           </div>
         </article>
 
+        <article class="cs" aria-labelledby="cs-mindu">
+          <div class="cs-top">
+            <div><span class="kick" style="background:#ff6b00;color:#fff">Local LLM · Video AI</span><h3 id="cs-mindu">MINDU RIOT</h3></div>
+            <div class="links"><a href="https://www.youtube.com/@minduriot" target="_blank" rel="noopener noreferrer">Channel &#8599;</a></div>
+          </div>
+          <p class="lede">A local-first AI platform that turns authorized livestreams and long videos into vertical Shorts and Reels. It finds the moments worth clipping, edits and captions them, writes the hook with a local LLM, and publishes to YouTube, Instagram and Facebook only after a human approves.</p>
+          <div class="anat-label">Anatomy</div>
+          <div class="anat" role="list" aria-label="MINDU RIOT pipeline">
+            <div class="node" role="listitem"><b>Video in</b><span>authorized YouTube streams and long videos</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node y" role="listitem"><b>Highlights</b><span>pick the moments worth clipping</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node b" role="listitem"><b>Edit</b><span>vertical reframe, captions, effects with FFmpeg</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node k" role="listitem"><b>Local LLM</b><span>Qwen via Ollama writes hooks and captions</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node p" role="listitem"><b>Human review</b><span>approve from a phone, behind a login</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node" role="listitem"><b>Publish</b><span>YouTube Data API + Meta Graph API</span></div>
+          </div>
+          <div class="cs-grid">
+            <div><h4>Why local-first</h4><p>The LLM runs on my own 4 GB GPU, so writing hooks and captions costs nothing per clip and footage never leaves the machine.</p></div>
+            <div><h4>Trade-off</h4><p>A small local model is cheaper but weaker than a hosted one, so every clip passes a human review step before it goes live.</p></div>
+            <div><h4>What I'd fix next</h4><p>Feed channel analytics back into clip selection, so the system learns which moments actually perform.</p></div>
+          </div>
+        </article>
+
         <div class="other-builds"><span class="lbl">Other builds</span><span class="chip">Live stock market game for an event (JavaScript)</span><span class="chip">Email scheduler for a client (Python)</span><span class="chip">6 production data tools at Genus Power</span></div>
       </div>
     </section>
