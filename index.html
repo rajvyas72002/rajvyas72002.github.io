@@ -2262,6 +2262,23 @@
               <!-- Main Image Box -->
               <div class="flip-item is-4">
                 <div class="flip-project-frame">
+                  <img src="./projects/minduriot.jpg" loading="eager" alt="MINDU RIOT" class="flip-project-img">
+                </div>
+              </div>
+
+              <!-- Right side Blue Visit Site button from behind image -->
+              <a href="https://www.youtube.com/@minduriot" target="_blank" rel="noopener noreferrer" class="flip-visit-btn" aria-label="MINDU RIOT: Watch Channel">
+                <span>Watch Channel</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="flip-card-container">
+
+              <!-- Main Image Box -->
+              <div class="flip-item is-5">
+                <div class="flip-project-frame">
                   <img src="./projects/genus.jpg" loading="eager" alt="Production data tools at Genus Power" class="flip-project-img">
                 </div>
               </div>
@@ -2419,6 +2436,11 @@
       .ai-nums span{font:600 12.5px/1.35 'Worksans','Work Sans',sans-serif;color:rgba(39,15,3,.72)}
       @media (max-width:700px){#hero .hero-text{font-size:12.5vw !important;line-height:.95 !important}}
       @media (max-width:700px){.ai-nums{grid-template-columns:repeat(2,1fr)}}
+      @font-face{font-family:'Balsamiq Sans';src:url(./scenes/balsamiq-sans-400.woff2) format('woff2');font-weight:400;font-display:swap}
+      .cs-scene{position:relative;margin:4px 0 22px;background-color:#fff;background-image:radial-gradient(#e6dccf 1px,transparent 1.2px);background-size:14px 14px;border:2.5px solid #000;box-shadow:4px 4px 0 #000;border-radius:14px;overflow:hidden}
+      .cs-scene stick-scene{height:240px;max-width:620px;margin:0 auto}
+      .cs-scene .hint{position:absolute;right:12px;bottom:8px;font:600 11.5px 'Worksans','Work Sans',sans-serif;color:rgba(39,15,3,.55)}
+      @media (max-width:600px){.cs-scene stick-scene{height:200px}.cs-scene .hint{position:static;display:block;text-align:center;padding:0 0 8px}}
       .cs-sec{position:relative;background:#ffe9cf;color:#270f03;padding:clamp(70px,9vw,120px) clamp(16px,4vw,48px)}
       .cs-wrap{max-width:1180px;margin:0 auto}
       .cs-head{display:flex;flex-direction:column;align-items:flex-start;margin-bottom:clamp(36px,5vw,60px)}
@@ -2467,6 +2489,10 @@
             <div class="links"><a href="https://github.com/rajvyas72002/vault-document-system" target="_blank" rel="noopener noreferrer">Code &#8599;</a></div>
           </div>
           <p class="lede">ChatGPT for your own PDFs, built so it can't bluff. Every answer cites the document, page and exact quote, and the quote is checked against the source text before it's shown. If the evidence isn't there, it says so.</p>
+          <div class="cs-scene">
+            <stick-scene scene="vault-rag" play="view" no-font label="A person asks a question about a document. A robot agent finds the exact line, checks the quote and stamps it verified. On the next play the answer is not in the document, so the agent stamps no evidence instead of guessing."></stick-scene>
+            <span class="hint">Click to replay · next time the answer isn't in the document</span>
+          </div>
           <div class="anat-label">Anatomy</div>
           <div class="anat" role="list" aria-label="Vault pipeline">
             <div class="node" role="listitem"><b>Upload</b><span>PDF / DOCX, type + size checks, SHA-256 dedupe</span></div><div class="arr" aria-hidden="true">&#8594;</div>
@@ -2491,6 +2517,10 @@
             <div class="links"><a href="https://github.com/rajvyas72002/Autotrack-AI" target="_blank" rel="noopener noreferrer">Code &#8599;</a></div>
           </div>
           <p class="lede">Real-time vehicle detection, tracking and license-plate reading on video, with the analytics report written automatically from the logs.</p>
+          <div class="cs-scene">
+            <stick-scene scene="autotrack-cv" play="view" no-font label="Two cars drive under a camera; each gets a tracking box with its own ID, its number plate is read and written to a log, and a robot agent sends the report."></stick-scene>
+            <span class="hint">Click to replay</span>
+          </div>
           <div class="anat-label">Anatomy</div>
           <div class="anat" role="list" aria-label="AutoTrack pipeline">
             <div class="node" role="listitem"><b>Video in</b><span>camera feed or recorded footage</span></div><div class="arr" aria-hidden="true">&#8594;</div>
@@ -2513,6 +2543,10 @@
             <div class="links"><a href="https://github.com/rajvyas72002/RCA-SYSTEM" target="_blank" rel="noopener noreferrer">Code &#8599;</a></div>
           </div>
           <p class="lede">Root-cause analysis for IT incidents. It watches system and infrastructure events, flags behaviour that looks wrong, and groups related anomalies so the team sees one incident with a likely cause instead of a wall of alerts.</p>
+          <div class="cs-scene">
+            <stick-scene scene="rca-incident" play="view" no-font label="A server rack floods a desk with alerts; a robot agent sorts them into one incident and one bit of noise, then points at the database server as the likely root cause."></stick-scene>
+            <span class="hint">Click to replay</span>
+          </div>
           <div class="anat-label">Anatomy</div>
           <div class="anat" role="list" aria-label="RCA pipeline">
             <div class="node" role="listitem"><b>Events in</b><span>system and infrastructure logs</span></div><div class="arr" aria-hidden="true">&#8594;</div>
@@ -2529,31 +2563,41 @@
           </div>
         </article>
 
-        <article class="cs" aria-labelledby="cs-mindu">
+
+        <article class="cs" aria-labelledby="cs-mr">
           <div class="cs-top">
-            <div><span class="kick" style="background:#ff6b00;color:#fff">Local LLM · Video AI</span><h3 id="cs-mindu">MINDU RIOT</h3></div>
+            <div><span class="kick" style="background:#ff6a00">Side project · AI video</span><h3 id="cs-mr">MINDU RIOT</h3></div>
             <div class="links"><a href="https://www.youtube.com/@minduriot" target="_blank" rel="noopener noreferrer">Channel &#8599;</a></div>
           </div>
-          <p class="lede">A local-first AI platform that turns authorized livestreams and long videos into vertical Shorts and Reels. It finds the moments worth clipping, edits and captions them, writes the hook with a local LLM, and publishes to YouTube, Instagram and Facebook only after a human approves.</p>
-          <div class="anat-label">Anatomy</div>
-          <div class="anat" role="list" aria-label="MINDU RIOT pipeline">
-            <div class="node" role="listitem"><b>Video in</b><span>authorized YouTube streams and long videos</span></div><div class="arr" aria-hidden="true">&#8594;</div>
-            <div class="node y" role="listitem"><b>Highlights</b><span>pick the moments worth clipping</span></div><div class="arr" aria-hidden="true">&#8594;</div>
-            <div class="node b" role="listitem"><b>Edit</b><span>vertical reframe, captions, effects with FFmpeg</span></div><div class="arr" aria-hidden="true">&#8594;</div>
-            <div class="node k" role="listitem"><b>Local LLM</b><span>Qwen via Ollama writes hooks and captions</span></div><div class="arr" aria-hidden="true">&#8594;</div>
-            <div class="node p" role="listitem"><b>Human review</b><span>approve from a phone, behind a login</span></div><div class="arr" aria-hidden="true">&#8594;</div>
-            <div class="node" role="listitem"><b>Publish</b><span>YouTube Data API + Meta Graph API</span></div>
+          <p class="lede">An AI video studio that watches long live streams, finds the moments people actually want to see, and turns them into vertical Shorts and Reels. It posts to YouTube, Instagram and Facebook every day on autopilot.</p>
+          <div class="cs-scene">
+            <stick-scene scene="mindu-riot" play="view" no-font label="A live stream rolls out as a film strip, a hype meter spikes on one moment, a robot agent snips it out, it turns into a vertical clip and goes out to Shorts, Reels and Facebook Reels, and the views roll in."></stick-scene>
+            <span class="hint">Click to replay</span>
+          </div>
+          <div class="anat-label">What it does</div>
+          <div class="anat" role="list" aria-label="What MINDU RIOT does">
+            <div class="node" role="listitem"><b>Stream in</b><span>a live stream or a long video</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node y" role="listitem"><b>Best moments</b><span>finds the minutes worth watching</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node p" role="listitem"><b>Vertical edit</b><span>captions, hook and pacing for phones</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node b" role="listitem"><b>Publish</b><span>YouTube Shorts, Instagram and Facebook Reels</span></div><div class="arr" aria-hidden="true">&#8594;</div>
+            <div class="node k" role="listitem"><b>Learn</b><span>channel results shape the next picks</span></div>
           </div>
           <div class="cs-grid">
-            <div><h4>Why local-first</h4><p>The LLM runs on my own 4 GB GPU, so writing hooks and captions costs nothing per clip and footage never leaves the machine.</p></div>
-            <div><h4>Trade-off</h4><p>A small local model is cheaper but weaker than a hosted one, so every clip passes a human review step before it goes live.</p></div>
-            <div><h4>What I'd fix next</h4><p>Feed channel analytics back into clip selection, so the system learns which moments actually perform.</p></div>
+            <div><h4>Why I built it</h4><p>A three-hour stream has a few minutes everyone wants to see. MINDU RIOT finds them and gets them out while they're still fresh.</p></div>
+            <div><h4>What it covers</h4><p>Gaming streams and esports first, plus sports score explainers and longer compilation videos.</p></div>
+            <div><h4>What's next</h4><p>Narrated long-form videos, and smarter picks from what the channels' audiences respond to.</p></div>
           </div>
         </article>
 
         <div class="other-builds"><span class="lbl">Other builds</span><span class="chip">Live stock market game for an event (JavaScript)</span><span class="chip">Email scheduler for a client (Python)</span><span class="chip">6 production data tools at Genus Power</span></div>
       </div>
     </section>
+    <script src="./scenes/stick.js" defer></script>
+    <script src="./scenes/vault-rag.js" defer></script>
+    <script src="./scenes/autotrack-cv.js" defer></script>
+    <script src="./scenes/rca-incident.js" defer></script>
+    <script src="./scenes/mindu-riot.js" defer></script>
+    <script>document.fonts && document.fonts.load("10px 'Balsamiq Sans'");</script>
 
     <section id="scrolltrigger" data-animate="videogrow" class="sec scrolltrigger-sec">
       <div class="sticky-w">
