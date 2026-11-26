@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0041)https://gsap-webflow-offbrand.webflow.io/ -->
-<html data-wf-domain="gsap-webflow-offbrand.webflow.io" data-wf-page="67fea42b19018db93e3fe13a"
+<html data-wf-page="67fea42b19018db93e3fe13a"
   data-wf-site="67fea42b19018db93e3fe132" class="w-mod-js lenis lenis-scrolling lenis-smooth">
 
 <head>
@@ -70,7 +69,6 @@
       }
     }
 </style>
-  <link href="https://cdn.prod.website-files.com/" rel="preconnect" crossorigin="anonymous">
   <title>Raj Vyas — AI Engineer (Computer Vision, LLMs, Python)</title>
   <meta
     content="Raj Vyas is an AI engineer in Jodhpur, India: RAG with verified citations, real-time computer vision, anomaly detection, and Python tools in production. Open to AI engineer roles."
@@ -1776,7 +1774,7 @@
           const scribbleEl = document.querySelector("[data-hero='scribble']");
           const scribble = scribbleEl ? [...scribbleEl.children[0].children] : [];
 
-          gsap.to(layer, {
+          if (layer) gsap.to(layer, {
             yPercent: 10,
             scrollTrigger: {
               trigger: layer,
@@ -1792,10 +1790,10 @@
 
           // Initial state
           if (titleSplit) gsap.set((titleSplit.flat() || []).filter(Boolean), { yPercent: -110 });
-          gsap.set(layer, { autoAlpha: 1 });
+          if (layer) gsap.set(layer, { autoAlpha: 1 });
           if (toggle) gsap.set(toggle, { scale: 3, rotation: 360 });
           if (parSplit) gsap.set(parSplit, { autoAlpha: 0, yPercent: 100 });
-          gsap.set(alpha, { autoAlpha: 0, scale: 0.7 });
+          if (alpha.length) gsap.set(alpha, { autoAlpha: 0, scale: 0.7 });
           if (scribble.length) gsap.set(scribble, { autoAlpha: 0 });
 
           if (titleSplit) {
@@ -1834,7 +1832,7 @@
             });
           }
 
-          gsap.to(alpha, {
+          if (alpha.length) gsap.to(alpha, {
             autoAlpha: 1,
             scale: 1,
             duration: 0.8,
